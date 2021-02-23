@@ -1,0 +1,262 @@
+{
+  "id": "b315ccaa-e1a4-4aa4-b01d-71e494d8a7d6",
+  "version": "2.0",
+  "name": "Yandex_mail_send",
+  "url": "https://yandex.ru",
+  "tests": [{
+    "id": "5be4017f-b6af-4037-b54e-abcbf359bc9e",
+    "name": "Yandex_mail_send",
+    "commands": [{
+      "id": "22704884-2661-4bc1-8507-e7d1a233e8bf",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63a59dd4-f2c4-4053-9170-0c5f878bc21c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1565x1164",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23d845ad-2685-402b-b842-132942516c17",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Войти в почту",
+      "targets": [
+        ["linkText=Войти в почту", "linkText"],
+        ["css=.desk-notif-card__login-enter-expanded", "css:finder"],
+        ["xpath=(//a[contains(@href, 'https://passport.yandex.ru/auth?origin=home_desktop_ru&retpath=https%3A%2F%2Fmail.yandex.ru%2F&backpath=https%3A%2F%2Fyandex.ru')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Войти в почту')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win4847",
+      "windowTimeout": 2000
+    }, {
+      "id": "063ea49b-c8ec-47c0-9d2b-2692f608b290",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win4847}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ceec12f4-a346-4f04-bc56-fdbbef9edfd1",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.Button2_view_action",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32092e1f-ef8a-4f9d-8ced-fc621c36297d",
+      "comment": "",
+      "command": "//type",
+      "target": "id=passp-field-login",
+      "targets": [],
+      "value": "qwerty123QWERTY1234321"
+    }, {
+      "id": "98663d5c-36ac-4987-84d9-902a3d8955c8",
+      "comment": "",
+      "command": "type",
+      "target": "id=passp-field-passwd",
+      "targets": [
+        ["id=passp-field-passwd", "id"],
+        ["name=passwd", "name"],
+        ["css=#passp-field-passwd", "css:finder"],
+        ["xpath=//input[@id='passp-field-passwd']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]/div/div/div[2]/div[3]/div/div/div/form/div[2]/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "qwertyQWERTY"
+    }, {
+      "id": "386cf4e6-9df7-490d-b0d8-f6a950484c5e",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=passp-field-passwd",
+      "targets": [
+        ["id=passp-field-passwd", "id"],
+        ["name=passwd", "name"],
+        ["css=#passp-field-passwd", "css:finder"],
+        ["xpath=//input[@id='passp-field-passwd']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div[2]/div[2]/div/div/div[2]/div[3]/div/div/div/form/div[2]/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "0b978af1-c0ab-4c76-b78c-508bae211ee8",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"nb-1\"]/body/div[2]/div[7]/div/div[2]/div/div/div[3]/div/div/a[1]/span[1]",
+      "targets": [],
+      "value": "qwerty123QWERTY1234321"
+    }, {
+      "id": "4c8e9a3f-ba66-45ec-8d62-02d37b9c43e0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Написать",
+      "targets": [
+        ["linkText=Написать", "linkText"],
+        ["css=.mail-ComposeButton", "css:finder"],
+        ["xpath=//html[@id='nb-1']/body/div[2]/div[7]/div/div[3]/div[2]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#compose')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Написать')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "664fe01a-ce0f-4a7e-87be-7a6ba7f9a5fc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ComposeRecipients-ToField .composeYabbles",
+      "targets": [
+        ["css=.ComposeRecipients-ToField .composeYabbles", "css:finder"],
+        ["xpath=//html[@id='nb-1']/body/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/div/div/div/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b6a62c6-7f3c-4885-9174-bf0618d9bd3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ContactsSuggestItemDesktop-Name > span",
+      "targets": [
+        ["css=.ContactsSuggestItemDesktop-Name > span", "css:finder"],
+        ["xpath=//html[@id='nb-1']/body/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div[3]/div/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div/div[3]/div/div/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Себе')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "49f4f852-b7a6-4f64-ad03-1a84e02afb93",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.ComposeRecipients-ToField .composeYabbles",
+      "targets": [
+        ["css=.ComposeRecipients-ToField .composeYabbles", "css:finder"],
+        ["xpath=//html[@id='nb-1']/body/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/div/div/div/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": "<span data-email=\"qwerty123QWERTY1234321@yandex.ru\" class=\"js-yabble yabble-compose\" bubble=\"\" contenteditable=\"false\" draggable=\"true\"><div class=\"ComposeYabble ComposeYabble_editable\" contenteditable=\"false\"><div class=\"ComposeYabble-Avatar\"><div class=\"mail-Avatar mail-Avatar_size-s\" style=\"background-color: rgb(230, 115, 191);\"><span class=\"mail-Avatar__Monogram\">QQ</span></div></div><div class=\"ComposeYabble-Text\" spellcheck=\"false\" autocomplete=\"off\" autocorrect=\"off\" autocapitalize=\"off\">qwerty qwerty</div><div class=\"ComposeYabble-RemoveIconWrapper\"><svg xmlns=\"http://www.w3.org/2000/svg\" class=\"svgicon svgicon-mail--Compose-RemoveYabble \" focusable=\"false\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#svgicon-mail--Compose-RemoveYabble\"></use><rect height=\"100%\" width=\"100%\" style=\"fill: transparent;\"></rect></svg></div></div></span>​"
+    }, {
+      "id": "54e77c96-6446-4867-8612-d7257c83cb09",
+      "comment": "",
+      "command": "type",
+      "target": "css=.composeTextField",
+      "targets": [
+        ["css=.composeTextField", "css:finder"],
+        ["xpath=//input[@name='']", "xpath:attributes"],
+        ["xpath=//html[@id='nb-1']/body/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div[3]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "d33ca25f-733a-4754-bb86-2fe28386dd10",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cke_wysiwyg_div > div",
+      "targets": [
+        ["css=.cke_wysiwyg_div > div", "css:finder"],
+        ["xpath=//div[@id='cke_1_contents']/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div[3]/div[2]/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a249ffc6-c532-4bc0-8ec6-7a96dd48d022",
+      "comment": "",
+      "command": "click",
+      "target": "//*[@id=\"cke_1_contents\"]/div",
+      "targets": [
+        ["css=.control_hovered_yes", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//html[@id='nb-1']/body/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div/div/div[2]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отправить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0b959cb-a37e-4e1e-9836-150f811bb165",
+      "comment": "",
+      "command": "editContent",
+      "target": "css=.cke_wysiwyg_div",
+      "targets": [
+        ["css=.cke_wysiwyg_div", "css:finder"],
+        ["xpath=//div[@id='cke_1_contents']/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div[3]/div[2]/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": "<div>test</div>"
+    }, {
+      "id": "89bf1187-5750-4478-926b-0f10992ab11f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "//*[@id=\"nb-1\"]/body/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/div[2]/div/div[1]/div[1]/button",
+      "targets": [
+        ["css=.control_hovered_yes", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//html[@id='nb-1']/body/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div/div/div[2]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отправить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca3ba6f1-9761-41dc-85e7-312743d3eff7",
+      "comment": "",
+      "command": "click",
+      "target": "//*[@id=\"nb-1\"]/body/div[2]/div[10]/div/div/div[2]/div/div[2]/div/div[1]/div[1]/div[2]/div/div[1]/div[1]/button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69c78b1a-6821-47d1-be4d-97f48fb97076",
+      "comment": "",
+      "command": "click",
+      "target": "css=.svgicon-mail--ComposeButton-Refresh > rect",
+      "targets": [
+        ["css=.svgicon-mail--ComposeButton-Refresh > rect", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "14501c65-8831-46fe-9f0d-a2c0bd0aa3e3",
+      "comment": "",
+      "command": "assertText",
+      "target": "//*[@id=\"nb-1\"]/body/div[2]/div[7]/div/div[3]/div[3]/div[2]/div[5]/div[1]/div/div/div[2]/div/div[1]/div/div/div/a/div/span[1]/span[2]/span",
+      "targets": [],
+      "value": "qwerty qwerty"
+    }, {
+      "id": "767ee224-9347-4404-8bfc-5789bd46efbb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.user-account__name:nth-child(1)",
+      "targets": [
+        ["css=.user-account__name:nth-child(1)", "css:finder"],
+        ["xpath=//html[@id='nb-1']/body/div[2]/div[7]/div/div[2]/div/div/div[3]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'qwerty123QWERTY1234321')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93ad28f0-5c91-48f0-bfdb-36dd1ab6b416",
+      "comment": "",
+      "command": "click",
+      "target": "css=.legouser__menu-item_action_exit > .menu__text",
+      "targets": [
+        ["css=.legouser__menu-item_action_exit > .menu__text", "css:finder"],
+        ["xpath=//html[@id='nb-1']/body/div[2]/div[7]/div/div[2]/div/div/div[3]/div/div/div/ul/ul/li[5]/a/span", "xpath:idRelative"],
+        ["xpath=//li[5]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Выйти из сервисов Яндекса')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a0a114a2-d739-4abf-b103-e9e392f7f855",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://yandex.ru/"],
+  "plugins": []
+}
